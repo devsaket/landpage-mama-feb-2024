@@ -42,6 +42,7 @@ body {
   background: url("./images/sky.webp") no-repeat center fixed;
   background-size: 100% 100%;
   border: 8px solid white;
+  overflow-x: hidden;
 }
 
 .container {
@@ -142,7 +143,7 @@ body {
 .midSection {
   display: flex;
   justify-content: space-around;
-  padding: 0 5%;
+  padding: 60px 5%;
 }
 
 .desktop-right {
@@ -365,6 +366,11 @@ input::placeholder {
   padding: 20px;
 }
 
+.new{
+  border:1px solid red ;
+  padding: 10px 50px;
+}
+
 .select2-container--default .select2-selection--single {
   background-color: transparent !important;
   border: none !important;
@@ -385,11 +391,16 @@ input::placeholder {
 }
 
 .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
-  top: 8px;
-  left: 1px;
-  right: auto;
+  /* top: 8px; */
+  right: 8rem;
+  width: 80%;
+  height: 100%;
+  padding: 1.2rem 0 1.2rem 0rem;
 }
-
+.selected{
+  display: flex;
+  justify-content: space-between;
+}
 .select2-selection__arrow b {
   border-color: #014282 transparent transparent transparent !important;
 }
@@ -495,8 +506,11 @@ hr {
   color: #C1D833;
   cursor: pointer;
 }
+.animateimage{
+  /* display: none; */
+}
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 767.9px) {
 
   .main-title-mobile,
   .mobile-hero-solgan,
@@ -506,7 +520,7 @@ hr {
   }
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 768px) {
 
   .main-title-desktop,
   .desktop-right,
@@ -514,6 +528,7 @@ hr {
   .footer-desktop,
   .prize-container {
     display: none;
+    overflow: hidden;
   }
 
   .line {
